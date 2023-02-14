@@ -2,7 +2,7 @@
 import { RouterContext } from "next/dist/shared/lib/router-context";
 import * as NextImage from "next/image";
 import React from "react";
-import "../pages/globals.css";
+import "../styles/globals.css";
 import CacheProvider from "../providers/CacheProvider";
 
 const BREAKPOINTS_INT = {

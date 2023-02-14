@@ -5,8 +5,7 @@ import { CACHE_STORAGES_ENUM } from "../providers/storage/constants";
 import { useState } from "react";
 import MemoryModuleCard from "../components/organism/MemoryModuleCard/MemoryModuleCard";
 
-const App: NextPage = () => {
-  console.log("rendering app");
+const Modules: NextPage = () => {
   const memory = useCache(CACHE_STORAGES_ENUM.context);
   const [newModuleKey, setNewModuleKey] = useState("");
   return (
@@ -56,7 +55,7 @@ const App: NextPage = () => {
   );
 };
 
-App.getInitialProps = ({ query }: { query: unknown }) => {
+Modules.getInitialProps = ({ query }: { query: unknown }) => {
   return {
     data: `some initial props including query params and controller data: ${JSON.stringify(
       query
@@ -64,4 +63,4 @@ App.getInitialProps = ({ query }: { query: unknown }) => {
   };
 };
 
-export default App;
+export default Modules;
