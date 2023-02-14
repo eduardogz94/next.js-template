@@ -2,9 +2,9 @@
 import type { AppProps } from "next/app";
 import { NextPageWithLayout } from "./page";
 
-import CacheProvider from "../providers/CacheProvider";
+import CacheProvider from "providers/CacheProvider";
 import Header from "components/organism/Header";
-import "../styles/globals.css";
+import "styles/globals.css";
 
 interface Props extends AppProps {
   Component: NextPageWithLayout;

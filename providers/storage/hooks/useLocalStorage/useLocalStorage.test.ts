@@ -1,5 +1,5 @@
-import { CACHE_STORAGES_ENUM } from "../../constants";
-import { ICacheData } from "../../interfaces";
+import { CACHE_STORAGES_ENUM } from "providers/storage/constants";
+import { ICacheData } from "providers/storage/interfaces";
 import { useLocalStorage } from "./useLocalStorage";
 
 jest.setTimeout(10000);

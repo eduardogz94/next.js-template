@@ -1,8 +1,8 @@
 import { useMemo, useCallback, useState } from "react";
 
-import { ICacheData } from "../../interfaces";
-import { CACHE_STORAGES_ENUM } from "../../constants";
-import CacheModule from "../../components/CacheModule";
+import { ICacheData } from "providers/storage/interfaces";
+import { CACHE_STORAGES_ENUM } from "providers/storage/constants";
+import CacheModule from "providers/storage/components/CacheModule";
 
 import { useContextStorageType } from "./";
 

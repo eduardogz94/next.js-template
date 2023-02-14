@@ -1,40 +1,12 @@
-import CacheModule from "../../../providers/storage/components/CacheModule";
 import { useState } from "react";
+import CacheModule from "providers/storage/components/CacheModule";
+import DisplayModuleData from "components/molecules/DisplayModuleData";
 
 export interface IMemoryCard {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   module: CacheModule | any;
   onRemove: () => void;
 }
-
-const DisplayModuleData: React.FC<IMemoryCard["module"]> = ({ module }) => {
-  return (
-    <table className="mt-4 w-full text-gray-700">
-      <tbody>
-        {Object.entries(module).map(([key, value]) => (
-          <tr key={key}>
-            <td className="pr-2 font-bold">{key}:</td>
-            <td>
-              {typeof value === "string" || typeof value === "number" ? (
-                value
-              ) : Array.isArray(value) || value instanceof Map ? (
-                <ul>
-                  {Array.from(value).map(([mapKey, mapValue]) => (
-                    <li key={mapKey}>
-                      {mapKey}: {mapValue}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                JSON.stringify(value)
-              )}
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  );
-};
 
 const MemoryModuleCard: React.FC<IMemoryCard> = ({ module, onRemove }) => {
   const [inputValue, setInputValue] = useState("");

@@ -1,6 +1,5 @@
 import { isEqual } from "lodash";
-
-import { ICacheData } from "../../interfaces";
+import { ICacheData } from "providers/storage/interfaces";
 
 const DEFAULT_TIMER = 3600000; // 1 hour
 

@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 
-import { useCache } from "../providers/CacheProvider";
-import { CACHE_STORAGES_ENUM } from "../providers/storage/constants";
+import { useCache } from "providers/CacheProvider";
+import { CACHE_STORAGES_ENUM } from "providers/storage/constants";
 import { useState } from "react";
-import MemoryModuleCard from "../components/organism/MemoryModuleCard/MemoryModuleCard";
+import MemoryModuleCard from "components/organism/MemoryModuleCard/MemoryModuleCard";
 
 const Modules: NextPage = () => {
   const memory = useCache(CACHE_STORAGES_ENUM.context);

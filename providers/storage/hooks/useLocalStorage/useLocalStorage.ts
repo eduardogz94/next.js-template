@@ -1,5 +1,5 @@
-import { CACHE_STORAGES_ENUM } from "../../constants";
-import { ICacheData } from "../../interfaces";
+import { CACHE_STORAGES_ENUM } from "providers/storage/constants";
+import { ICacheData } from "providers/storage/interfaces";
 
 // TODO {WIP} also should handle cookies and session storage
 export const useLocalStorage = (): any => {
