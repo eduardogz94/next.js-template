@@ -6,6 +6,5 @@ const config = {
     defaultLocale: "en",
   },
   output: "standalone",
-
 };
 export default config;
