@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import Modules from "pages/modules";
+import Modules from "../../pages/modules";
 
 export default {
   title: "pages/Modules",
