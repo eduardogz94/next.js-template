@@ -1,8 +1,6 @@
 import Head from "next/head";
 
-export interface IHeaderTemplate {}
-
-const Header: React.FC<{}> = () => {
+const Header: React.FC = () => {
   return (
     <>
       <Head>

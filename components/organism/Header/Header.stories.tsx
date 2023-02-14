@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import HeaderTemplate, { IHeaderTemplate } from "./Header";
+import HeaderTemplate from "./Header";
 import { mockHeaderTemplateProps } from "./Header.mocks";
 
 export default {
@@ -16,4 +16,4 @@ export const Base = Template.bind({});
 
 Base.args = {
   ...mockHeaderTemplateProps.base,
-} as IHeaderTemplate;
+};
