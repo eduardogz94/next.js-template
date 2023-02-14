@@ -1,9 +1,9 @@
-// @ts-check
+import React from "react";
 import { RouterContext } from "next/dist/shared/lib/router-context";
 import * as NextImage from "next/image";
-import React from "react";
-import "../styles/globals.css";
-import CacheProvider from "../providers/CacheProvider";
+// @ts-ignore
+import CacheProvider from "providers/CacheProvider";
+import "styles/globals.css";
 
 const BREAKPOINTS_INT = {
   xs: 375,

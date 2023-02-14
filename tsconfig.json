@@ -27,11 +27,11 @@
     "**/*.mjs",
     "**/*.css"
   ],
-  // "paths": {
-  //   "components": ["components"],
-  //   "pages": ["pages"],
-  //   "styles": ["styles"],
-  //   "providers": ["providers"]
-  // },
+  "paths": {
+    "components": ["components"],
+    "pages": ["pages"],
+    "styles": ["styles"],
+    "providers": ["providers"]
+  },
   "exclude": ["node_modules"]
 }
