@@ -23,6 +23,15 @@ const customJestConfig = {
   verbose: true,
   preset: "ts-jest",
   coverageReporters: ["clover", "json", "lcov", ["text", { skipFull: true }]],
+  collectCoverageFrom: [
+    "pages/**/*.{js,jsx,ts,tsx}",
+    "components/**/*.{js,jsx,ts,tsx}",
+    "providers/**/*.{js,jsx,ts,tsx}",
+    "styles/**/*.{js,jsx,ts,tsx}",
+    "!**/*.stories.{js,jsx,ts,tsx}",
+    "!**/*.mocks.{js,jsx,ts,tsx}",
+    "!**/index.{js,jsx,ts,tsx}",
+  ],
 };
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
