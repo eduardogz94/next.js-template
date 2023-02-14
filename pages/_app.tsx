@@ -3,7 +3,8 @@ import type { AppProps } from "next/app";
 import { NextPageWithLayout } from "./page";
 
 import CacheProvider from "providers/CacheProvider";
-import Header from "components/organism/Header";
+import Header from "components/molecules/Header";
+import Footer from "components/molecules/Footer";
 import "styles/globals.css";
 
 interface Props extends AppProps {
@@ -18,6 +19,7 @@ const MyApp: React.FC<Props> = ({ Component, pageProps }) => {
     <>
       <Header />
       <CacheProvider>{getLayout(<Component {...pageProps} />)}</CacheProvider>
+      <Footer />
     </>
   );
 };

@@ -3,7 +3,7 @@ import { mockMemoryCardMocks } from "./MemoryCard.mocks";
 import MemoryModuleCard, { IMemoryCard } from "./MemoryModuleCard";
 
 export default {
-  title: "templates/MemoryModuleCard",
+  title: "components/organism/MemoryModuleCard",
   component: MemoryModuleCard,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
