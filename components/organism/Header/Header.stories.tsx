@@ -15,5 +15,5 @@ const Template: ComponentStory<typeof HeaderTemplate> = (args) => (
 export const Base = Template.bind({});
 
 Base.args = {
-  ...mockHeaderTemplateProps.base,
+  ...mockHeaderTemplateProps,
 };
