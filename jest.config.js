@@ -31,6 +31,7 @@ const customJestConfig = {
     "!**/*.mocks.{js,jsx,ts,tsx}",
     "!**/index.{js,jsx,ts,tsx}",
     "pages/**/!(_)*.{js,jsx,ts,tsx}",
+    "tests/**/*.{js,jsx,ts,tsx}",
   ],
 };
 

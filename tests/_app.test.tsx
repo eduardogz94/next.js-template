@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import MyApp from "./_app";
+import MyApp from "pages/_app";
 
 describe("MyApp", () => {
   it("renders the Header, Footer, and page content", () => {

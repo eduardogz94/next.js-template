@@ -1,6 +1,6 @@
 import { render, fireEvent, screen } from "@testing-library/react";
 import { useCache } from "providers/CacheProvider";
-import Modules from "./modules";
+import Modules from "pages/modules";
 
 jest.mock("providers/CacheProvider");
 
