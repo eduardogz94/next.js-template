@@ -94,7 +94,6 @@ export default class CacheModule implements ICacheModule {
   setExpirationTimer(
     key: keyof ICacheData,
     time = DEFAULT_TIMER,
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
     cb = () => {}
   ) {
     const timer = setTimeout(() => {

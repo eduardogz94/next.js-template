@@ -53,12 +53,12 @@ const Modules: NextPage = () => {
   );
 };
 
-Modules.getInitialProps = ({ query }: { query: unknown }) => {
-  return {
-    data: `some initial props including query params and controller data: ${JSON.stringify(
-      query
-    )}`,
-  };
-};
+// Modules.getInitialProps = ({ query }: { query: unknown }) => {
+//   return {
+//     data: `some initial props including query params and controller data: ${JSON.stringify(
+//       query
+//     )}`,
+//   };
+// };
 
 export default Modules;

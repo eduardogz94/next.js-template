@@ -90,15 +90,20 @@ describe("MemoryModuleCard", () => {
     expect(valueInput).toHaveValue("testValue");
   });
 
-  // it("calls module.removeKey when Remove Input Key Cache button is clicked", () => {
-  //   const removeKeyButton = screen.getByRole("button", {
-  //     name: "Remove Input Key Cache",
-  //   });
-  //   const keyInput = screen.getByPlaceholderText("Cache Key");
+  it("calls module.removeKey when Remove Input Key Cache button is clicked", () => {
+    render(
+      <CacheProvider>
+        <MemoryModuleCard module={mockModule} onRemove={onRemove} />
+      </CacheProvider>
+    );
+    const removeKeyButton = screen.getByRole("button", {
+      name: "Remove Input Key Cache",
+    });
+    const keyInput = screen.getByPlaceholderText("Cache Key");
 
-  //   userEvent.type(keyInput, "testKey");
-  //   userEvent.click(removeKeyButton);
+    userEvent.type(keyInput, "testKey");
+    userEvent.click(removeKeyButton);
 
-  //   expect(mockModule.removeKey).toHaveBeenCalledWith("testKey");
-  // });
+    expect(mockModule.removeKey).toHaveBeenCalledWith("testKey");
+  });
 });
