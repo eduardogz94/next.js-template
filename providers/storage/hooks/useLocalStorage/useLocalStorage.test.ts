@@ -23,6 +23,8 @@ const data = "data";
 
 describe("useLocalStorage", () => {
   let localStorageMock: any;
+  const cb = jest.fn();
+
   beforeEach(() => {
     localStorageMock = setUpLocalStorageMock();
     global.localStorage = localStorageMock;
@@ -123,7 +125,25 @@ describe("useLocalStorage", () => {
     result.setExpirationTimer(key);
     result.remove(key);
     setTimeout(() => {
+      expect(cb).not.toHaveBeenCalled();
       done();
     }, 100);
+  });
+
+  it("should call the provided callback function if the data has not been removed before the timer has expired", (done) => {
+    const result = useLocalStorage();
+    result.set(key, data);
+    result.setExpirationTimer(key, 100, () => {
+      done();
+    });
+  });
+
+  it("should call the default callback function if the data has not been removed before the timer has expired", (done) => {
+    const result = useLocalStorage();
+    result.set(key, data);
+    result.setExpirationTimer(key, 100);
+    setTimeout(() => {
+      done();
+    }, 200);
   });
 });

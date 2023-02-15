@@ -1,7 +1,6 @@
 import { CACHE_STORAGES_ENUM } from "providers/storage/constants";
 import { ICacheData } from "providers/storage/interfaces";
 
-// TODO {WIP} also should handle cookies and session storage
 export const useLocalStorage = (): any => {
   return {
     type: CACHE_STORAGES_ENUM.local,
@@ -61,14 +60,16 @@ export const useLocalStorage = (): any => {
     length() {
       return this.storage.length;
     },
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
+
     setExpirationTimer(key: keyof ICacheData, time = 1000, cb = () => {}) {
-      return setTimeout(() => {
+      const callback = () => {
         if (this.get(key).data !== null) {
           this.remove(key);
           cb();
         }
-      }, time);
+      };
+
+      return setTimeout(callback, time);
     },
   };
 };
